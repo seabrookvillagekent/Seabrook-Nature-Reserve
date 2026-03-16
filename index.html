@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seabrook Nature Reserve - Community Action Group</title>
+
+
+<meta name="description" content="Seabrook Nature Reserve Community Action Group is bringing people together to protect, restore and celebrate the wildlife, history and coastal landscape of Seabrook, Princes Parade and the Royal Military Canal." />
+<meta name="keywords" content="Seabrook Nature Reserve, Seabrook, Princes Parade, Royal Military Canal, community action group, local wildlife, conservation, Hythe, Kent, coastal habitat, nature reserve" />
+<meta name="author" content="Seabrook Nature Reserve Community Action Group" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#fffce9" />
+
+<link rel="canonical" href="https://seabrooknaturereserve.org/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Seabrook Nature Reserve Community Action Group" />
+<meta property="og:description" content="A community group forming to protect and support the future of Seabrook Nature Reserve, its wildlife, history and coastal landscape." />
+<meta property="og:url" content="https://seabrooknaturereserve.org/" />
+<meta property="og:site_name" content="Seabrook Nature Reserve Community Action Group" />
+<meta property="og:image:alt" content="Seabrook coastline, Royal Military Canal and nature reserve landscape" />
+<meta property="og:locale" content="en_GB" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Seabrook Nature Reserve Community Action Group" />
+<meta name="twitter:description" content="Helping protect the wildlife, history and coastal landscape of Seabrook, Princes Parade and the Royal Military Canal." />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffce9;
+      --text: #0b213f;
+      --muted: #d5d6cd;
+      --accent: #e88d52;
+      --card: rgba(255, 255, 255, 0.58);
+      --border: rgba(11, 33, 63, 0.1);
+      --shadow: 0 20px 60px rgba(11, 33, 63, 0.08);
+      --radius: 24px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto;
+      width: 34rem;
+      height: 34rem;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -1;
+      opacity: 0.35;
+      pointer-events: none;
+    }
+
+    body::before {
+      top: -10rem;
+      right: -8rem;
+      background: var(--accent);
+    }
+
+    body::after {
+      bottom: -12rem;
+      left: -10rem;
+      background: var(--muted);
+    }
+
+    .wrap {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 252, 233, 0.72);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 12px 30px rgba(232, 141, 82, 0.25);
+    }
+
+    .button-secondary {
+      background: rgba(213, 214, 205, 0.4);
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .hero {
+      min-height: calc(100vh - 76px);
+      display: grid;
+      align-items: center;
+      padding: 4rem 0 5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.8rem;
+      background: rgba(213, 214, 205, 0.45);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 1rem;
+      max-width: 9ch;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      max-width: 54ch;
+      opacity: 0.82;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card {
+      padding: 1.75rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .stat small {
+      display: block;
+      opacity: 0.6;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat strong {
+      font-size: 1.6rem;
+      letter-spacing: -0.04em;
+    }
+
+    .section {
+      padding: 1.5rem 0 5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-header p {
+      max-width: 48ch;
+      opacity: 0.72;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 1.5rem;
+      min-height: 220px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-badge {
+      width: fit-content;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(232, 141, 82, 0.12);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.65rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      opacity: 0.74;
+    }
+
+    .cta {
+      padding-bottom: 6rem;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .cards,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .wrap {
+        width: min(calc(100% - 1.25rem), var(--max-width));
+      }
+
+      .section-header {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+    
+
+.qr-code {
+  float: right;
+  width: 160px;
+  height: 160px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  object-fit: contain;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">SNR - Community Action Group</div>
+      <nav class="nav-links">
+        <a href="#history">History</a>
+        <a href="#amphibians">Amphibians</a>
+        <a href="#bats">Bats</a>
+        <a href="#birds">Birds</a>
+        <a href="#invertebrates">Invertebrates</a>
+        <a href="#mammals">Mammals</a>
+        <a href="#plants">Plants</a>
+        <a href="#reptiles">Reptiles</a>
+        <a href="#contact">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="hero-grid">
+        <div class="reveal visible">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            Assembling and forming
+          </div>
+          <h1>Seabrook Nature Reserve.</h1>
+          <p>
+           <strong>Next Meeting: </strong> 10am Saturday 2nd May at The Tram Shelter on the junction of Cliff Road Canal Bridge and Princes Parade. <br>
+           <img src="tramstop.png" alt="the tram stop meeting place illustration" class="" style="max-width: 100%; padding-top: 2%;"    />
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Join the WhatsApp group</a>
+           <!-- <a class="button button-secondary" href="#work">See more</a> --> 
+          </div>
+        </div>
+
+        <aside class="panel hero-card reveal">
+          <div>
+            <h3>Join us in planting trees in shade we may never know.</h3>
+          </div>
+
+          <div class="stat">
+            <div>
+              <small>Assemble a group of volunteers.<br>
+                Form a management team.<br>
+                Share ideas and knowledge.</small>
+              <strong>May</strong>
+            </div>
+            <span>2026</span>
+          </div>
+
+          <div class="stat">
+            <div>
+              <small>Begin small 1 day projects.
+                <br>Continue local outreach.
+                <br>Build partnerships.</small>
+              <strong>July</strong>
+            </div>
+            <span>2026</span>
+          </div>
+
+          <div class="stat">
+            <div>
+              <small>Begin larger projects.<br>Leverage partnerships.</small>
+              <strong>September</strong>
+            </div>
+            <span>2026</span>
+          </div>
+          <div class="stat">
+            <div>
+              <small>Creation of a formal legal entity to protect our local area community nature reserve in 2027 and beyond.</small>
+              <strong>November</strong>
+            </div>
+            <span>2026</span>
+          </div>
+          <div class="card-badge">Join us on WhatsApp</div>
+        </aside>
+
+                    
+
+      </div>
+    </section>
+
+
+
+
+
+    <section class="section wrap" id="history">
+      <div class="section-header reveal">
+        <div>
+          <div class="eyebrow">About</div>
+          <h2>The History.</h2>
+        </div>
+        <p>
+          Beside the Royal Military Canal, SNR is a recovering grassland and coastal habitat where wildlife and community can thrive together.
+        </p>
+      </div>
+
+
+
+
+
+      <div class="cards">
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1804–1809</div>
+            <h3>Royal Military Canal Construction</h3>
+            <p>The Royal Military Canal was constructed during the Napoleonic Wars as a defensive barrier against a potential French invasion. Beginning at Seabrook and running inland behind the coastline, it protected Romney Marsh and the surrounding low-lying land. The canal and its earthworks became a defining historic landscape feature of Hythe and Seabrook and remain an important heritage asset today.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1876–1893</div>
+            <h3>Seabrook Lifeboat Station</h3>
+            <p>A Royal National Lifeboat Institution station operated at Seabrook on land close to the present-day Princes Parade site. Established to assist vessels travelling along the busy English Channel route, the station housed rescue equipment and lifeboats serving the Hythe and Seabrook coastline until its closure in 1893.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1881</div>
+            <h3>Princes Parade Opened</h3>
+            <p>Princes Parade was opened in 1881 by the Prince of Wales as a coastal road linking Hythe and Seabrook. The road formed part of wider seaside development designed to promote tourism and residential expansion along the coastline, creating a scenic promenade running parallel to the Royal Military Canal and the English Channel.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1886–1892</div>
+            <h3>Seabrook Estate Development</h3>
+            <p>In the late nineteenth century the South Eastern Railway and associated development companies acquired land around Seabrook to promote seaside housing and tourism. New roads and plots were laid out for villas and holiday homes, shaping the coastal settlement pattern that still defines Seabrook today.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1891–1921</div>
+            <h3>Horse-Drawn Tramway</h3>
+            <p>A horse-drawn tramway operated along Princes Parade as part of the Folkestone, Hythe and Sandgate Tramways system. Beginning in 1891, tramcars connected Sandgate, Hythe, and Seabrook, helping tourists and residents travel along the coast. The tramway closed in 1921 as motor transport became more common.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">Mid-20th Century</div>
+            <h3>Public Coastal Open Space</h3>
+            <p>Over time the coastal strip between the Royal Military Canal and the seafront became publicly owned open space managed by the local authority. The land was effectively held for public recreation and access, maintaining open views across the coast while providing walking routes and access to both the canal towpath and the promenade.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">Pre-1974</div>
+            <h3>Former Landfill Site</h3>
+            <p>Parts of the Princes Parade land were used as landfill prior to 1974. After the landfill ceased operation the area was covered with soil and grassed over, gradually becoming a natural open space where wildlife habitats developed while remaining publicly accessible.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1969</div>
+            <h3>Hythe Conservation Area</h3>
+            <p>The Hythe Conservation Area was designated to protect the historic character of the town and its surrounding environment. The designation recognised the importance of preserving historic buildings, landscapes, and views including those across the Royal Military Canal and the open coastal land at Princes Parade.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">1992</div>
+            <h3>Conservation Area Extended</h3>
+            <p>The conservation area boundary was expanded to include additional surrounding landscapes and views. This strengthened planning protections around the canal corridor and coastal land, requiring development proposals to consider the historic setting and landscape character of Hythe and Seabrook.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2016</div>
+            <h3>Princes Parade Development Review</h3>
+            <p>Early redevelopment proposals for Princes Parade were reviewed through planning and design assessments. These reviews identified important constraints including the proximity of the Royal Military Canal, ecological sensitivity of the site, and the need to protect the historic setting of the canal and coastline.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2016–2020</div>
+            <h3>Canal Conservation Programme</h3>
+            <p>A Heritage Lottery Fund project supported restoration and conservation work along the Royal Military Canal. The programme focused on preserving historic military features, improving biodiversity, and enhancing public access and interpretation along the canal corridor.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2017</div>
+            <h3>Outline Planning Permission</h3>
+            <p>Outline planning permission was granted for a major mixed-use redevelopment of Princes Parade. The proposal included around 150 homes, a new leisure centre, a hotel, retail units, cafés, and a redesigned promenade alongside several hectares of open public space.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2018</div>
+            <h3>Heritage and Environmental Concerns</h3>
+            <p>Further planning reports highlighted concerns about moving the Princes Parade road closer to the Royal Military Canal. Heritage specialists and local residents argued that this could harm the canal’s historic setting and ecological value, prompting calls for stronger protections.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2021–2022</div>
+            <h3>Project Viability Issues</h3>
+            <p>Rising construction costs, flood-risk management challenges, and contamination associated with the former landfill site raised serious concerns about the viability of the Princes Parade development. Public opposition also increased during this period.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2023</div>
+            <h3>Development Cancelled</h3>
+            <p>Following local elections, the newly elected council leadership cancelled the Princes Parade development proposals. The housing, leisure centre, and commercial plans were abandoned and the future use of the land began to be reconsidered.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2024</div>
+            <h3>Hoardings Removed</h3>
+            <p>Large hoardings that had surrounded the site during the development phase were dismantled and replaced with a lower stock fence. This restored views across the land while maintaining safety boundaries due to contamination risks beneath the surface.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2024</div>
+            <h3>King Charles III Coast Path</h3>
+            <p>The coastal route passing through Princes Parade forms part of the King Charles III England Coast Path, the national long-distance walking route being created around the entire coastline of England. The path, which runs along the seafront and canal area at Seabrook and Hythe, legally protects public access to the coast and ensures the route remains open for walking and recreation.</p>
+          </div>
+        </article>
+
+        <article class="panel card reveal">
+          <div>
+            <div class="card-badge">2025</div>
+            <h3>Future Use Under Review</h3>
+            <p>The council launched a consultation to determine the long-term future of the Princes Parade land. Potential options include ecological restoration, improved public access, community recreation, and maintaining the land as open coastal space while integrating it with the coastal path and canal landscape.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+</section>
+
+
+ <section class="section wrap" id="amphibians">
+    <div class="section-header reveal">
+        <div>
+        <div class="eyebrow">Amphibians</div>
+        <h2>Amphibians of SNR</h2>
+        </div>
+        <p>
+         Frogs, toads and newts use nearby freshwater habitats and damp grassland, returning to ponds and canals each spring to breed.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Amphibian</div>
+            <h3>Common Toad (Bufo bufo)</h3>
+            <p>A UK Biodiversity Action Plan Priority Species that breeds in ponds and canals but spends most of the year in terrestrial habitats such as grassland and hedgerows. At Seabrook, toads likely migrate between the Royal Military Canal and surrounding grassland.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Amphibian</div>
+            <h3>Common Frog (Rana temporaria)</h3>
+            <p>A familiar amphibian found across the UK. Frogs breed in ponds and slow-moving water and thrive in moist grassland and wetland habitats where they feed on insects and worms.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Amphibian</div>
+            <h3>Smooth Newt (Lissotriton vulgaris)</h3>
+            <p>Britain’s most widespread newt species. During spring it breeds in ponds and still water, while outside the breeding season it shelters in damp grassland or beneath logs and stones.</p>
+        </div>
+        </article>
+
+    </div>
+</section>
+
+
+<section class="section wrap" id="bats">
+        <div class="section-header reveal">
+            <div>
+            <div class="eyebrow">Bats</div>
+            <h2>Bats of SNR</h2>
+            </div>
+            <p>
+            Several bat species hunt insects along the canal at dusk, using dark corridors and open grassland to navigate and feed.
+            </p>
+        </div>
+
+    <div class="cards">
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bat</div>
+            <h3>Common Pipistrelle (Pipistrellus pipistrellus)</h3>
+            <p>One of the UK’s smallest bats, frequently seen flying at dusk hunting insects. It often roosts in buildings and feeds along watercourses and woodland edges such as the Royal Military Canal.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bat</div>
+            <h3>Soprano Pipistrelle (Pipistrellus pygmaeus)</h3>
+            <p>A close relative of the common pipistrelle that prefers feeding near water bodies such as rivers, lakes, and canals where midges and other insects are abundant.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bat</div>
+            <h3>Daubenton’s Bat (Myotis daubentonii)</h3>
+            <p>Often called the “water bat”, Daubenton’s bats skim the surface of water to catch insects. The Royal Military Canal provides ideal feeding habitat.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bat</div>
+            <h3>Noctule (Nyctalus noctula)</h3>
+            <p>One of Britain’s largest bats, flying high and fast in open landscapes while hunting beetles and moths over grassland and coastal areas.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bat</div>
+            <h3>Serotine (Eptesicus serotinus)</h3>
+            <p>A large bat associated with farmland and coastal landscapes. It roosts in buildings and hunts insects over open grassland and scrub habitats.</p>
+        </div>
+        </article>
+    </div>
+</section>
+
+
+<section class="section wrap" id="birds">
+    <div class="section-header reveal">
+        <div>
+          <div class="eyebrow">Birds</div>
+          <h2>Birds of SNR</h2>
+        </div>
+        <p>
+          Reeds, scrub and grassland attract kingfishers, warblers, sparrows and linnets, providing feeding and nesting habitat along the canal and coast.
+        </p>
+    </div>
+
+    <div class="cards">
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Kingfisher (Alcedo atthis)</h3>
+            <p>A brilliant blue and orange bird often seen darting low over water while hunting small fish. The Royal Military Canal provides ideal kingfisher habitat.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Cetti’s Warbler (Cettia cetti)</h3>
+            <p>A small brown bird with a loud explosive song living in dense waterside vegetation along rivers and canals.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Reed Bunting (Emberiza schoeniclus)</h3>
+            <p>A wetland bird nesting in reeds and scrub near water and feeding on seeds and insects.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Song Thrush (Turdus philomelos)</h3>
+            <p>A melodic thrush feeding on worms and snails in grasslands and gardens. It is listed on the UK Red List of birds of conservation concern.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>House Sparrow (Passer domesticus)</h3>
+            <p>A once extremely common bird that has declined dramatically in recent decades. It nests in buildings and feeds on seeds and insects.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Linnet (Linaria cannabina)</h3>
+            <p>A small finch of scrub and grassland habitats that feeds on seeds and nests in dense bushes. It is a UK Red List species.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Bird</div>
+            <h3>Starling (Sturnus vulgaris)</h3>
+            <p>A familiar bird famous for spectacular winter murmurations. Starlings feed on insects in grasslands and are also on the UK Red List.</p>
+        </div>
+        </article>
+    </div>
+</section>
+
+
+ <section class="section wrap" id="invertebrates">
+        <div class="section-header reveal">
+            <div>
+                <div class="eyebrow">Invertebrates</div>
+                    <h2>Invertebrates of SNR</h2>
+                </div>
+            <p>
+            Bees, butterflies and beetles pollinate flowers and recycle nutrients, supporting the wider ecosystem and providing food for birds and reptiles.
+            </p>
+        </div>
+
+    <div class="cards">
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Invertebrate</div>
+            <h3>Brown-banded Carder Bee (Bombus humilis)</h3>
+            <p>A rare bumblebee associated with flower-rich grasslands and coastal habitats where it feeds on nectar from plants such as knapweed and vetch.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Invertebrate</div>
+            <h3>Shrill Carder Bee (Bombus sylvarum)</h3>
+            <p>One of the UK’s rarest bumblebees, now mainly confined to southern England and dependent on unimproved flower-rich grasslands.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Invertebrate</div>
+            <h3>Short-haired Bumblebee (Bombus subterraneus)</h3>
+            <p>A species once extinct in the UK and recently reintroduced in Kent. It thrives in large areas of flower-rich grassland.</p>
+        </div>
+        </article>
+    </div>
+</section>
+
+
+
+ <section class="section wrap" id="mammals">
+        <div class="section-header reveal">
+            <div>
+                <div class="eyebrow">Mammals</div>
+                    <h2>Mammals of SNR</h2>
+                </div>
+            <p>
+            Foxes, hedgehogs, badgers and small mammals forage in grass and scrub, while canalside habitat may support otters and water voles.
+            </p>
+        </div>
+
+    <div class="cards">
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Mammal</div>
+            <h3>Badger (Meles meles)</h3>
+            <p>A protected nocturnal mammal living in underground setts. Badgers forage in grassland and scrub habitats for earthworms, insects, and fruit.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Mammal</div>
+            <h3>Red Fox (Vulpes vulpes)</h3>
+            <p>An adaptable predator found in both rural and urban environments. Foxes hunt small mammals, birds, insects, and fruit across coastal grasslands.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Mammal</div>
+            <h3>European Hedgehog (Erinaceus europaeus)</h3>
+            <p>A much-loved British species now considered Vulnerable to extinction in the UK. Hedgehogs feed on beetles, slugs, and worms and favour rough grassland and scrub habitats.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Mammal</div>
+            <h3>European Otter (Lutra lutra)</h3>
+            <p>An elusive aquatic mammal that lives along rivers and canals. Evidence of otters along the Royal Military Canal suggests a healthy aquatic ecosystem.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Mammal</div>
+            <h3>Water Vole (Arvicola amphibius)</h3>
+            <p>Often mistaken for a rat, the water vole lives along riverbanks and canals where it digs burrows and feeds on aquatic vegetation.</p>
+        </div>
+        </article>
+
+    </div>
+</section>
+
+
+
+<section class="section wrap" id="plants">
+        <div class="section-header reveal">
+            <div>
+                <div class="eyebrow">Plants</div>
+                    <h2>Plants of SNR</h2>
+                </div>
+            <p>
+            Coastal plants and wildflowers grow on shingle and grassland, stabilising soil and providing nectar and seeds for insects and birds.
+            </p>
+        </div>
+    <div` class="cards">
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Plant</div>
+            <h3>Sea Kale (Crambe maritima)</h3>
+            <p>A striking coastal plant with thick leaves and white flowers that grows on shingle beaches and helps stabilise coastal habitats.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Plant</div>
+            <h3>Sea Beet (Beta vulgaris subsp. maritima)</h3>
+            <p>The wild ancestor of cultivated beetroot that grows along coastal shingle and provides food for insects.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Plant</div>
+            <h3>Yellow Horned-poppy (Glaucium flavum)</h3>
+            <p>A distinctive coastal plant with yellow flowers and long curved seed pods that thrives in sandy and shingle habitats.</p>
+        </div>
+        </article>
+
+    </div>
+</section>
+
+
+<section class="section wrap" id="reptiles">
+        <div class="section-header reveal">
+            <div>
+                <div class="eyebrow">Reptile</div>
+                    <h2>Reptiles of SNR</h2>
+                </div>
+            <p>
+            Warm grassland supports slow-worms, common lizards and grass snakes, which bask in sunlight and shelter in vegetation and log piles.
+            </p>
+        </div>
+
+    <div class="cards">
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Reptile</div>
+            <h3>Slow-worm (Anguis fragilis)</h3>
+            <p>Protected under the Wildlife and Countryside Act 1981, the slow-worm is a legless lizard often mistaken for a snake. It prefers tall grass, scrub edges, and warm sheltered habitats where it feeds on slugs and insects. The grassland and scrub areas at Seabrook provide ideal cover and basking spots.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Reptile</div>
+            <h3>Common Lizard (Zootoca vivipara)</h3>
+            <p>Britain’s most widespread reptile. It thrives in sunny grasslands, dunes, and coastal habitats where it basks on warm surfaces and hunts insects and spiders. South-facing grassland banks and scrub edges around Seabrook provide ideal habitat.</p>
+        </div>
+        </article>
+
+        <article class="panel card reveal">
+        <div>
+            <div class="card-badge">Reptile</div>
+            <h3>Grass Snake (Natrix helvetica)</h3>
+            <p>Britain’s largest snake, associated with wetlands and freshwater. It swims well and feeds mainly on amphibians. The Royal Military Canal provides excellent feeding habitat while nearby grassland offers basking and egg-laying areas.</p>
+        </div>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- 
+<section class="section wrap" id="x">
+        <div class="section-header reveal">
+            <div>
+            <div class="eyebrow">x</div>
+                <h2>x of SNR</h2>
+            </div>
+            <p>
+            add some text
+            </p>
+        </div>
+    <div class="cards">
+
+        <article class="panel card reveal">
+            <div>
+                <div class="card-badge">x</div>
+                <h3>aaaa</h3>
+                <p>aaaa</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+-->
+
+
+<section class="cta wrap" id="contact">
+  <div class="panel cta-box reveal">
+
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Ready to join us?</h2>
+
+      <p style="padding-bottom: 20px;">
+        We are a group of local volunteers who will meet regularly to care for the land and wildlife at Seabrook Nature Reserve.<br>
+        The WhatsApp group is called <strong>Seabrook Nature Reserve Community Action Group</strong>. </p>
+      <p style="padding-bottom: 20px;">
+        You can join by scanning the QR code below with your phone camera or by using the link below 
+        <a href="https://chat.whatsapp.com/JUq5dZCJhVt8kpqXwNMS2v?mode=gi_t">https://chat.whatsapp.com/JUq5dZCJhVt8kpqXwNMS2v?mode=gi_t</a>
+      </p>
+
+      <a class="button button-primary"
+         href="https://chat.whatsapp.com/JUq5dZCJhVt8kpqXwNMS2v?mode=gi_t">
+         Join the WhatsApp group
+      </a>
+      <img src="qr.png" alt="QR code to join the Seabrook Nature Reserve WhatsApp group" class="qr-code">
+    </div>
+
+  </div>
+</section>
+  </main>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach((element, index) => {
+      if (index !== 0) observer.observe(element);
+    });
+  </script>
+</body>
+</html>
