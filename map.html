@@ -191,75 +191,37 @@
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="hero-grid">
-        <div class="reveal visible">
-          <div class="eyebrow">
-            <span class="dot"></span>
-            Assembling and forming
-          </div>
-          <h1>Seabrook Nature Reserve.</h1>
-          <p>
-            <strong>Next Meeting: </strong> 10am Saturday 2nd May at The Tram Shelter on the junction of Cliff Road Canal Bridge and Princes Parade.<br>
-            <img src="tramstop.png" alt="the tram stop meeting place illustration" style="max-width: 100%; padding-top: 2%;" />
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://chat.whatsapp.com/JUq5dZCJhVt8kpqXwNMS2v">Join the WhatsApp group</a>
-          </div>
-        </div>
 
-        <aside class="panel hero-card reveal">
-          <div>
-            <h3>Upcoming Meet Ups</h3>
-          </div>
 
-          <div class="stat">
-            <div>
-              <strong>May</strong>
-              <small>Assemble a group of volunteers.<br>
-              Form a management team.<br>
-              Share ideas and knowledge.</small>
-            </div>
-            <span>02/05/2026</span>
-          </div>
+<section class="page-title wrap" id="map-title">
+  <div class="reveal visible">
+    <h1>SNR Map</h1>
+    <p>Explore the key locations around Seabrook Nature Reserve.</p>
+  </div>
+</section>
+    
+    <section class="section wrap" id="map">
+      <div class="section-header reveal">
+      </div>
 
-          <div class="stat">
-            <div>
-              <strong>July</strong>
-              <small>Begin small 1 day projects.<br>
-              Continue local outreach.<br>
-              Build partnerships.</small>
-            </div>
-            <span>2026</span>
-          </div>
-
-          <div class="stat">
-            <div>
-              <strong>September</strong>
-              <small>Begin larger projects.<br>Leverage partnerships.</small>
-            </div>
-            <span>2026</span>
-          </div>
-
-          <div class="stat">
-            <div>
-              <strong>November</strong>
-              <small>Creation of a formal legal entity</small>
-              <small>Provide long term legal protections for 2027 and beyond.</small>
-            </div>
-            <span>2026</span>
-          </div>
-        </aside>
+      <div class="panel map-panel reveal">
+        <div id="reserve-map"></div>
       </div>
     </section>
-
   </main>
 
-
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""
+></script>
 
 <script>
 
-
+  const hiddenIcon = L.divIcon({
+  className: 'hidden-marker',
+  iconSize: [0, 0]
+});
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -299,7 +261,238 @@
     }
   });
 
-  
+  const mapElement = document.getElementById('reserve-map');
+
+  if (mapElement && typeof L !== 'undefined') {
+    const map = L.map('reserve-map').setView([51.07134496676766, 1.115042711399114], 16);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    const polygon = L.polygon([
+      [51.0714595629182, 1.10961794350108],
+      [51.071284284339676, 1.1103582331891904],
+      [51.07160787504308, 1.114810700153912],
+      [51.07232246316443, 1.114714140629376],
+      [51.07236291121872, 1.1148965308423886],
+      [51.07162809938692, 1.1150681922193417],
+      [51.07198539467072, 1.1191451499219784],
+      [51.07243032456392, 1.1192417094465146],
+      [51.07240335923763, 1.1197245070691952],
+      [51.07200561884958, 1.1197137782331357],
+      [51.07209325685583, 1.1212480017896542],
+      [51.07223482559227, 1.1213660189863095],
+      [51.072207860152034, 1.1215376803632626],
+      [51.07205954994997, 1.1214196631666074],
+      [51.07206629133311, 1.1215376803632626],
+      [51.07218089469611, 1.121655697559918],
+      [51.07206629133311, 1.1224067160840878],
+      [51.0719719118799, 1.1223101565595517],
+      [51.07139888963922, 1.1225891062971005],
+      [51.07147978732687, 1.123275751804913],
+      [51.07141237259699, 1.1232972094770322],
+      [51.070613500571156, 1.1152452180143246],
+      [51.06966629688349, 1.1075794646497616],
+      [51.07131125031804, 1.1073112437482724]
+    ], {
+      color: '#488259',
+      weight: 2,
+      fillColor: '#488259',
+      fillOpacity: 0.33
+    }).addTo(map);
+
+    const locations = [
+      {
+        name: 'Shelter',
+        coords: [51.070585642140735, 1.115145907907804],
+        text: 'Volunteer meet-up point near the canal bridge and Princes Parade.'
+      },
+      {
+        name: 'Canal Bridge',
+        coords: [51.07102537781248, 1.1073202682024559],
+        text: ''
+      },
+      {
+        name: 'Canal Bridge',
+        coords: [51.071323859310354, 1.1150696280477241],
+        text: 'A key access and heritage point beside the canal.'
+      },
+      {
+        name: 'Toilet',
+        coords: [51.07200847086227, 1.1195078346156442],
+        text: 'Public restroom facilities.'
+      },
+      {
+        name: 'Car Park',
+        coords: [51.071232014179486, 1.122090247266129],
+        text: 'Public parking area for visitors to the reserve.'
+      },
+      {
+        name: 'Seabrook Stream SSSI',
+        coords: [51.074512558859006, 1.119096171363498],
+        text: '.'
+      },
+
+      {
+        name: 'Coffee',
+        coords: [51.068300484953035, 1.0978278794440468],
+        text: '.'
+      },
+
+
+            {
+        name: 'The Honest Bakehouse',
+        coords: [51.07254865833808, 1.1151459181425742],
+        text: '.'
+      },
+
+                  {
+        name: 'The Kent Downs AONB',
+        coords: [51.07448493093838, 1.1076261210032063],
+        text: '.'
+      },
+          
+      {
+
+        name: 'Royal Military Canal',
+        coords: [51.07102943715757, 1.1111490800745587],
+        text: '.'
+      },
+      {
+        name: 'Car Park',
+        coords: [51.071631867752764, 1.1251980218263424],
+        text: 'Parking area near the seafront facilities.'
+      },
+            {
+        name: 'Picnic Area',
+        coords: [51.071152153215536, 1.1093162915232946],
+        text: ' .'
+      },
+            {
+        name: 'Martello Tower',
+        coords: [51.073861263336575, 1.1247147198514205],
+        text: ' .'
+      },
+
+
+            {
+        name: 'Sand Pit',
+        coords: [51.071102522210275, 1.1238585620419537],
+        text: ' .'
+      },
+    
+
+                  {
+        name: 'Paraka Wood Kent Downs',
+        coords: [51.07881769057458, 1.1132806492270029],
+        text: ' .'
+      },
+
+                        {
+        name: 'Resturant',
+        coords: [51.071869241633294, 1.1234764398985577],
+        text: ' .'
+      },
+
+                        {
+        name: 'Pub',
+        coords: [51.07274858906708, 1.1190248085846701],
+        text: ' .'
+      },
+
+                        {
+        name: 'Pub',
+        coords: [51.07301855320517, 1.1349649304005451],
+        text: ' .'
+      },
+
+
+                              {
+        name: 'Golf',
+        coords: [51.06990338474122, 1.1040234418975161],
+        text: ' .'
+      },
+
+
+                              {
+        name: 'Pub',
+        coords: [51.07293450105481, 1.0921185994729703],
+        text: ' .'
+      },
+                                  {
+        name: 'Convence Store',
+        coords: [51.07254218451429, 1.1185884810688451],
+        text: ' .'
+      },  
+                        {
+        name: 'Pub',
+        coords: [51.08092949546906, 1.1233948783842842],
+        text: ' .'
+      },
+
+      {
+        name: 'Seapoint Canoe Centre',
+        coords: [51.07177135074097, 1.1215944832282791],
+        text: 'Canoe and watersports centre.'
+      },
+      {
+        name: 'Playground',
+        coords: [51.07141277719723, 1.1206768182425162],
+        text: 'Children’s play area.'
+      },
+      {
+        name: 'Bus Stop',
+        coords: [51.07244855411289, 1.1194132600638904],
+        text: 'Towards Hythe.'
+      },
+      {
+        name: 'Bus Stop',
+        coords: [51.072527175759, 1.1204488967019635],
+        text: 'Towards Sandgate and Folkestone.'
+      },
+      {
+        name: 'Coffee Shop',
+        coords: [51.07103335424778, 1.120541192824156],
+        text: 'Nearby refreshments.'
+      },
+      {
+        name: 'The Kiosk',
+        coords: [51.07148773488861, 1.1242360916208116],
+        text: 'Seafront kiosk.'
+      },
+      {
+        name: 'The Sauna',
+        coords: [51.070990240577714, 1.1193450464274575],
+        text: 'Sauna facilities.'
+      }
+    ];
+
+    locations.forEach((location) => {
+const marker = L.marker(location.coords, {
+  icon: hiddenIcon
+}).addTo(map);
+
+      marker.bindTooltip(location.name, {
+        permanent: true,
+        direction: 'top',
+        offset: [0, -10],
+        className: 'map-label'
+      }).openTooltip();
+
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h3>${location.name}</h3>
+          <p>${location.text}</p>
+        </div>
+      `);
+    });
+
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 200);
+  }
 </script>
  
   <!-- hello verifier :-) -->
