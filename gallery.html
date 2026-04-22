@@ -37,6 +37,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.js"></script>
 <!-- Latest compiled and minified CSS -->
@@ -216,15 +222,22 @@
     <section class="section wrap" id="gallery">
       <div class="section-header reveal">
 
+https://nanogallery2.nanostudio.org/builder.html
+    <div ID="ngy2p" data-nanogallery2='{
+        "itemsBaseURL": "https://seabrooknaturereserve.co.uk/gallery/",
+        "thumbnailWidth": "200",
+        "thumbnailHeight": "auto",
+        "thumbnailLabel": {
+          "position": "overImageOnBottom"
+        },
+        "thumbnailAlignment": "center",
+        "thumbnailOpenImage": true
+      }'>
+      <a href="" data-ngthumb="carpark.jpg" data-ngdesc="">gallery</a>
+      <a href="carpark.png" data-ngthumb="carpark.png" data-ngdesc="">x</a>
+      <a href="wall.png" data-ngthumb="wall.png" data-ngdesc="">x</a>
 
-        <div id="panorama"></div>
-<script>
-pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "carPark.jpg",
-    "autoLoad": true
-});
-</script>
+    </div>
       </div>
 
 
