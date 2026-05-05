@@ -49,115 +49,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.7/build/pannellum.css">
 
 
-  <style>
-    .map-panel {
-      padding: 1rem;
-      overflow: hidden;
-    }
-
-    #reserve-map {
-      width: 100%;
-      height: 560px;
-      border-radius: calc(var(--radius) - 8px);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      background: #dfe8dc;
-    }
-
-    .leaflet-container {
-      font-family: 'Space Grotesk', sans-serif;
-      background: #dfe8dc;
-    }
-
-    .leaflet-control-zoom a {
-      background: rgba(255, 252, 233, 0.96);
-      color: var(--text);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .leaflet-control-zoom a:hover {
-      background: rgba(232, 141, 82, 0.12);
-      color: var(--text);
-    }
-
-    .leaflet-bar {
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .leaflet-popup-content-wrapper {
-      background: rgba(255, 252, 233, 0.96);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .leaflet-popup-tip {
-      background: rgba(255, 252, 233, 0.96);
-    }
-
-    .leaflet-popup-content {
-      margin: 12px 14px;
-      min-width: 220px;
-    }
-
-    .map-popup h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .map-popup p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.45;
-      opacity: 0.82;
-    }
-
-    @media (max-width: 900px) {
-      #reserve-map {
-        height: 440px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #reserve-map {
-        height: 360px;
-      }
-    }
-
-.map-label {
-  background: rgba(255, 252, 233, 0.95);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.2rem 0.45rem;
-  font-size: 0.72rem;
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(6px);
-  white-space: nowrap;
-}
-
-.leaflet-tooltip.map-label {
-  background: rgba(255, 252, 233, 0.95);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.leaflet-tooltip-top.map-label:before {
-  border-top-color: rgba(255, 252, 233, 0.95);
-}
-
-.hidden-marker {
-  background: transparent;
-  border: none;
-}
-  </style>
-
     <style>
     #panorama {
         width: 100%;
@@ -166,15 +57,6 @@
     </style>
 
 
-  <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2205703');
-  </script>
-  <!-- End MailerLite Universal -->
 </head>
 <body>
   <header class="nav">
@@ -204,6 +86,8 @@
         <a href="leisure.html">Leisure</a>
         <a href="history.html">History</a>
         <a href="resources.html">Resources</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about-us.html">About Us</a>
         <a href="index.html">Home</a>
       </nav>
     </div>
@@ -212,37 +96,338 @@
   <main>
 
 
-<section class="page-title wrap" id="map-title">
+<section class="page-title wrap" id="gallery-title">
   <div class="reveal visible">
-    <h1>SNR Map</h1>
-    <p>Explore the key locations around Seabrook Nature Reserve.</p>
+    <h1>SNR Gallery</h1>
+    <p>Explore the image gallery</p>
   </div>
 </section>
     
     <section class="section wrap" id="gallery">
       <div class="section-header reveal">
 
-https://nanogallery2.nanostudio.org/builder.html
-    <div ID="ngy2p" data-nanogallery2='{
-        "itemsBaseURL": "https://seabrooknaturereserve.co.uk/gallery/",
-        "thumbnailWidth": "200",
-        "thumbnailHeight": "auto",
+</div>
+<div class="gallery-panel panel">
+  <h2>Inaugural Meeting - May 2026</h2>
+    <div id="ngy2p" data-nanogallery2='{
+        "itemsBaseURL": "gallery/",
+  "thumbnailWidth": 400,
+  "thumbnailHeight": 250,
+      "thumbnailBorderVertical": 0,
+    "thumbnailBorderHorizontal": 0,
+    "thumbnailGutterWidth": 16,
+    "thumbnailGutterHeight": 16,
+  "galleryMosaic": [
+      { "c": 1, "r": 1, "w": 3, "h": 2 },
+      { "c": 1, "r": 3, "w": 2, "h": 2 },
+      { "c": 3, "r": 3, "w": 1, "h": 1 },
+      { "c": 3, "r": 4, "w": 1, "h": 1 },
+
+      { "c": 1, "r": 5, "w": 3, "h": 1 },
+
+      { "c": 1, "r": 7, "w": 1, "h": 1 },
+      { "c": 1, "r": 6, "w": 1, "h": 1 },
+      { "c": 2, "r": 6, "w": 2, "h": 2 },
+      
+      { "c": 1, "r": 8, "w": 3, "h": 2 },
+
+      { "c": 1, "r": 10, "w": 2, "h": 2 },
+      { "c": 3, "r": 10, "w": 1, "h": 1 }
+
+],
         "thumbnailLabel": {
           "position": "overImageOnBottom"
         },
         "thumbnailAlignment": "center",
         "thumbnailOpenImage": true
       }'>
-      <a href="" data-ngthumb="carpark.jpg" data-ngdesc="">gallery</a>
-      <a href="carpark.png" data-ngthumb="carpark.png" data-ngdesc="">x</a>
-      <a href="wall.png" data-ngthumb="wall.png" data-ngdesc="">x</a>
+
+
+<img 
+  src = "DSC_0161.JPG"                                                                   
+  data-ngsrc = "DSC_0161.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0159.JPG"                                                                   
+  data-ngsrc = "DSC_0159.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0155.JPG"                                                                   
+  data-ngsrc = "DSC_0155.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0152.JPG"                                                                   
+  data-ngsrc = "DSC_0152.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0181.JPG"                                                                   
+  data-ngsrc = "DSC_0181.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0157.JPG"                                                                   
+  data-ngsrc = "DSC_0157.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0162.JPG"                                                                   
+  data-ngsrc = "DSC_0162.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0166.JPG"                                                                   
+  data-ngsrc = "DSC_0166.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0118.JPG"                                                                   
+  data-ngsrc = "DSC_0118.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+
+
+
+<img 
+  src = "DSC_0175.JPG"                                                                   
+  data-ngsrc = "DSC_0175.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "DSC_0178.JPG"                                                                   
+  data-ngsrc = "DSC_0178.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+
+
+
+
+
+
+
+
+</div>
 
     </div>
       </div>
 
 
     </section>
+
+    <section class="section wrap" id="gallery">
+      <div class="section-header reveal">
+
+</div>
+<div class="gallery-panel panel">
+  <h2>Seed Bombs - May 2026</h2>
+    <div id="ngy2p2" data-nanogallery2='{
+        "itemsBaseURL": "gallery/",
+  "thumbnailWidth": 400,
+  "thumbnailHeight": 250,
+      "thumbnailBorderVertical": 0,
+    "thumbnailBorderHorizontal": 0,
+    "thumbnailGutterWidth": 16,
+    "thumbnailGutterHeight": 16,
+  "galleryMosaic": [
+      { "c": 1, "r": 1, "w": 2, "h": 2 },
+      { "c": 3, "r": 1, "w": 1, "h": 2 }
+
+],
+        "thumbnailLabel": {
+          "position": "overImageOnBottom"
+        },
+        "thumbnailAlignment": "center",
+        "thumbnailOpenImage": true
+      }'>
+
+
+<img 
+  src = "seedbombs.JPG"                                                                   
+  data-ngsrc = "seedbombs.JPG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "seedbombs2.JPEG"                                                                   
+  data-ngsrc = "seedbombs2.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+</div>
+
+    </div>
+      </div>
+
+
+    </section>
+
   </main>
+
+
+
+ <section class="section wrap" id="gallery">
+      <div class="section-header reveal">
+
+</div>
+<div class="gallery-panel panel">
+  <h2>History Exhibition - May 2026</h2>
+    <div id="ngy2p3" data-nanogallery2='{
+        "itemsBaseURL": "gallery/",
+  "thumbnailWidth": 400,
+  "thumbnailHeight": 250,
+      "thumbnailBorderVertical": 0,
+    "thumbnailBorderHorizontal": 0,
+    "thumbnailGutterWidth": 16,
+    "thumbnailGutterHeight": 16,
+  "galleryMosaic": [
+      { "c": 1, "r": 1, "w": 4, "h": 2 },
+
+      { "c": 1, "r": 3, "w": 2, "h": 2 },
+      { "c": 3, "r": 3, "w": 2, "h": 2 },
+      { "c": 1, "r": 5, "w": 4, "h": 1 },
+      
+      { "c": 1, "r": 6, "w": 1, "h": 2 },
+      { "c": 2, "r": 6, "w": 1, "h": 2 },
+      { "c": 3, "r": 6, "w": 1, "h": 2 },
+      { "c": 4, "r": 6, "w": 1, "h": 2 },
+
+      { "c": 1, "r": 8, "w": 1, "h": 2 },
+      { "c": 2, "r": 8, "w": 1, "h": 2 },
+      { "c": 3, "r": 8, "w": 1, "h": 2 },
+      { "c": 4, "r": 8, "w": 1, "h": 2 },  
+
+      { "c": 1, "r": 10, "w": 1, "h": 2 },
+      { "c": 2, "r": 10, "w": 1, "h": 2 },
+      { "c": 3, "r": 10, "w": 1, "h": 2 },
+      { "c": 4, "r": 10, "w": 1, "h": 2 }
+
+],
+        "thumbnailLabel": {
+          "position": "overImageOnBottom"
+        },
+        "thumbnailAlignment": "center",
+        "thumbnailOpenImage": true
+      }'>
+
+
+<img 
+  src = "IMG_6372.JPEG"                                                                   
+  data-ngsrc = "IMG_6372.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+<img 
+  src = "IMG_6378.JPEG"                                                                   
+  data-ngsrc = "IMG_6378.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+<img 
+  src = "IMG_6377.JPEG"                                                                   
+  data-ngsrc = "IMG_6377.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6405.JPEG"                                                                   
+  data-ngsrc = "IMG_6405.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6389.JPEG"                                                                   
+  data-ngsrc = "IMG_6389.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6390.JPEG"                                                                   
+  data-ngsrc = "IMG_6390.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6391.JPEG"                                                                   
+  data-ngsrc = "IMG_6391.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6393.JPEG"                                                                   
+  data-ngsrc = "IMG_6393.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6394.JPEG"                                                                   
+  data-ngsrc = "IMG_6394.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6395.JPEG"                                                                   
+  data-ngsrc = "IMG_6395.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img    
+  src = "IMG_6396.JPEG"                                                                   
+  data-ngsrc = "IMG_6396.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6397.JPEG"                                                                   
+  data-ngsrc = "IMG_6397.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6398.JPEG"                                                                   
+  data-ngsrc = "IMG_6398.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6399.JPEG"                                                                   
+  data-ngsrc = "IMG_6399.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6400.JPEG"                                                                   
+  data-ngsrc = "IMG_6400.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+<img 
+  src = "IMG_6401.JPEG"                                                                   
+  data-ngsrc = "IMG_6401.JPEG"                                                                 
+  data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'        
+/>
+
+
+
+</div>
+
+    </div>
+      </div>
+
+    </section>
+
+
 
 
 <script>

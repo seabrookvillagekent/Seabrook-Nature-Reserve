@@ -645,3 +645,119 @@ a {
     height: 360px;
   }
 }
+#ngy2p,
+#ngy2p2,
+#ngy2p3,
+#ngy2p,
+#ngy2p * {
+  box-sizing: content-box;
+}
+#ngy2p a ,
+#ngy2p2 a ,
+#ngy2p3 a ,
+#ngy2p a {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.gallery-panel {
+  padding: 1rem;
+  overflow: hidden;
+}
+#ngy2p,
+#ngy2p2,
+#ngy2p3,
+#ngy2p {
+  width: 100%;
+}
+#ngy2p .nGY2GThumbnail,
+#ngy2p2 .nGY2GThumbnail,
+#ngy2p3 .nGY2GThumbnail,
+#ngy2p .nGY2GThumbnail {
+  border-radius: calc(var(--radius) - 10px);
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(11, 33, 63, 0.12);
+  background: var(--card);
+  border: 1px solid var(--border);
+    filter: sepia(30%);
+    filter: drop-shadow(1px rgb(88, 116, 79));
+
+}
+#ngy2p .nGY2GThumbnail:hover,
+#ngy2p2 .nGY2GThumbnail:hover,
+#ngy2p3 .nGY2GThumbnail:hover,
+#ngy2p .nGY2GThumbnail:hover {
+  transition: all 0.3s ease;
+filter: sepia(0%);
+}
+#ngy2p  .nGY2GThumbnailImage,
+#ngy2p2  .nGY2GThumbnailImage,
+#ngy2p3 .nGY2GThumbnailImage,
+#ngy2p .nGY2GThumbnailImage {
+  border-radius: calc(var(--radius) - 10px);
+}
+#ngy2p .nGY2GThumbnailLabel,
+#ngy2p2 .nGY2GThumbnailLabel,
+#ngy2p3 .nGY2GThumbnailLabel,
+#ngy2p .nGY2GThumbnailLabel {
+  background: linear-gradient(
+    to top,
+    rgba(11, 33, 63, 0.72),
+    rgba(11, 33, 63, 0)
+  );
+  color: #fff;
+  font-family: 'Space Grotesk', sans-serif;
+  padding: 1rem;
+}
+#ngy2p .nGY2GThumbnailTitle ,
+#ngy2p2 .nGY2GThumbnailTitle ,
+#ngy2p3 .nGY2GThumbnailTitle ,
+#ngy2p .nGY2GThumbnailTitle {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+#ngy2p .nGY2GThumbnailDescription,
+#ngy2p2 .nGY2GThumbnailDescription,
+#ngy2p3 .nGY2GThumbnailDescription,
+#ngy2p .nGY2GThumbnailDescription {
+  opacity: 0.85;
+}
+
+
+ul,
+ol {
+  padding-left: 1.5rem; /* controls indentation */
+  margin-bottom: 1rem;  /* optional spacing */
+}
+
+li {
+  margin-bottom: 0.4rem; /* optional spacing between items */
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.member {
+  padding: 0.75rem;
+  border-radius: 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.member img {
+  width: 160px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10%;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.member p {
+  font-size: 0.9rem;
+}
