@@ -770,6 +770,7 @@ li {
 
   @media (max-width: 800px) {
   .members img{
-    max-width: 140px;
-    max-height: 200px;
+    max-width: 110px;
+    max-height: 170px;
   }
+}
