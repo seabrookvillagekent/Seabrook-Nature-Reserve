@@ -750,14 +750,26 @@ li {
 }
 
 .member img {
-  width: 160px;
+  max-width: 160px;
   height: 220px;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 16px;
   display: block;
   margin: 0 auto 0.5rem;
+  filter: sepia(30%);
+}
+
+.member img:hover {
+  transition: all 0.3s ease;
+  filter: sepia(0%);  
 }
 
 .member p {
   font-size: 0.9rem;
 }
+
+  @media (max-width: 800px) {
+  .members img{
+    max-width: 140px;
+    max-height: 200px;
+  }
