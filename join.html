@@ -36,126 +36,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <style>
-    .map-panel {
-      padding: 1rem;
-      overflow: hidden;
-    }
 
-    #reserve-map {
-      width: 100%;
-      height: 560px;
-      border-radius: calc(var(--radius) - 8px);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      background: #dfe8dc;
-    }
-
-    .leaflet-container {
-      font-family: 'Space Grotesk', sans-serif;
-      background: #dfe8dc;
-    }
-
-    .leaflet-control-zoom a {
-      background: rgba(255, 252, 233, 0.96);
-      color: var(--text);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .leaflet-control-zoom a:hover {
-      background: rgba(232, 141, 82, 0.12);
-      color: var(--text);
-    }
-
-    .leaflet-bar {
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow);
-      border-radius: 16px;
-      overflow: hidden;
-    }
-
-    .leaflet-popup-content-wrapper {
-      background: rgba(255, 252, 233, 0.96);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-    }
-
-    .leaflet-popup-tip {
-      background: rgba(255, 252, 233, 0.96);
-    }
-
-    .leaflet-popup-content {
-      margin: 12px 14px;
-      min-width: 220px;
-    }
-
-    .map-popup h3 {
-      margin: 0 0 0.45rem;
-      font-size: 1rem;
-      letter-spacing: -0.02em;
-    }
-
-    .map-popup p {
-      margin: 0;
-      font-size: 0.95rem;
-      line-height: 1.45;
-      opacity: 0.82;
-    }
-
-    @media (max-width: 900px) {
-      #reserve-map {
-        height: 440px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #reserve-map {
-        height: 360px;
-      }
-    }
-
-.map-label {
-  background: rgba(255, 252, 233, 0.95);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.2rem 0.45rem;
-  font-size: 0.72rem;
-  font-weight: 500;
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(6px);
-  white-space: nowrap;
-}
-
-.leaflet-tooltip.map-label {
-  background: rgba(255, 252, 233, 0.95);
-  color: var(--text);
-  border: 1px solid var(--border);
-}
-
-.leaflet-tooltip-top.map-label:before {
-  border-top-color: rgba(255, 252, 233, 0.95);
-}
-
-.hidden-marker {
-  background: transparent;
-  border: none;
-}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 
 
-  </style>
 
-  <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2205703');
-  </script>
-  <!-- End MailerLite Universal -->
+
+
 </head>
 <body>
   <header class="nav">
@@ -194,63 +81,53 @@
   </header>
 
   <main>
-    <section class="hero wrap">
-      <div class="hero-grid">
-        <div class="reveal visible">
-          <div class="eyebrow">
-            <span class="dot"></span>
-            Accepting Members and Volunteers
-          </div>
-          <h1>Seabrook Nature Reserve.</h1>
-                      <img src="images/shelter.png" alt="the tram stop meeting place illustration" style="max-width: 100%; padding-top: 2%;" />
-          <p>
-            <strong>Next Meeting: </strong> 10am Saturday 11th July at The Picnic Benches, on the north side of the canal to the west.<br></p>
-          <p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="https://maps.app.goo.gl/fb3FFgsf4ycAyinK8">Google Map link to the picnic benches location</a>
-            <br>
-            <a class="button button-primary" href="MP-TonyVaughn.pdf">Read our letter of support from MP Tony Vaugn</a>
-          </div>
-        </div>
-
-        <aside class="panel hero-card reveal">
-          <div>
-            <h3>Upcoming Meet Ups</h3>
-          </div>
 
 
-          <div class="stat">
-            <div>
-              <strong>July</strong>
-              <small>Begin small 1 day projects.<br>
-              Continue local outreach.<br>
-              Build partnerships.</small>
-            </div>
-            <span>11/07/2026</span>
-          </div>
+<section class="page-title wrap" id="about-us-title">
+  <div class="reveal visible">
+    <h1>Join Us</h1>
+    <p>Join the Seabrook Nature Reserve Community Action Group and our mission to protect and celebrate the local environment.</p>
+  </div>
+</section>
 
-          <div class="stat">
-            <div>
-              <strong>August</strong>
-              <small>Begin larger projects.<br>Leverage partnerships.</small>
-            </div>
-            <span>08/08/2026</span>
-          </div>
 
-          <div class="stat">
-            <div>
-              <strong>September</strong>
-              <small>Creation of a formal legal entity</small>
-              <small>Provide long term legal protections for 2027 and beyond.</small>
-            </div>
-            <span>12/09/2026</span>
-          </div>
-        </aside>
+<section class="page-title wrap" id="about-us-title">
+  <div class="reveal visible">
+    <h2>Constitution</h2>
+    <p>The constitution outlines the rules and principles that govern the Seabrook Nature Reserve Community Action Group.</p>
+    <br>
+    <a class="button button-primary" href="SNRC.pdf">Read the Constitution</a>
+  </div>
+</section>
+
+<section class="page-title wrap" id="about-us-title">
+  <div class="reveal visible">
+    <h2>Code of Conduct</h2>
+    <p>The code of conduct outlines the expected behavior and responsibilities of members of the Seabrook Nature Reserve Community Action Group.</p>
+    <br>
+    <a class="button button-primary" href="SNRCOC.pdf">Read the Code of Conduct</a>
+    
+
+  </div>
+</section>
+
+<section class="page-title wrap" id="about-us-title">
+  <div class="reveal visible">
+    <h2>Membership Form</h2>
+    <p>You can join the Seabrook Nature Reserve Community Action Group by filling out our membership form.</p>
+    <br>
+    <div style="width: 600px; margin-left: -30px;">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeGxGxCs6ymiO1lytaXq1NBepHopkFg4bUbbNMtWk5MIqisrw/viewform?embedded=true" width="100%" height="2038" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  </div>
+</section>
+
+
+    </div>
       </div>
+
     </section>
-
   </main>
-
 
 
 <script>
@@ -295,7 +172,6 @@
     }
   });
 
-  
 </script>
  
   <!-- hello verifier :-) -->
